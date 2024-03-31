@@ -1,11 +1,12 @@
 import React from 'react'
 import CartWidget from '../CartWidget/CartWidget'
+import Image from 'next/image'
 
 const Header = () => {
   return (
     <header className='flex justify-between pt-5 px:-1 md:px-10 items-center'>
     <div className='flex items-center gap-5'>
-    <img src='ngl.jpg' alt="logo de la empresa" width={"80px"} />
+    <Image src='/ngl.jpg' alt="logo de la empresa" width={80} height={80} />
 
     </div>   
 

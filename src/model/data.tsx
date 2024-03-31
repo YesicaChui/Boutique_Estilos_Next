@@ -4,7 +4,7 @@ const data = [
     "productName": "Chompa Mujer Close Rosado Lavanda",
     "productImage": "https://topitop.vteximg.com.br/arquivos/ids/344466-1000-1248/1998469_1.jpg?v=638449841043800000",
     "productPrice": "S/ 49.95",
-    "description": "Topitop ha diseñado prendas para pasar esta temporada con moda y estilo de la marca Xiomi. Renueva tu guardarropa con estos Chompas Mujer en el color de tu preferencia y combínalos para armar tu look perfecto.",
+    "description": "Diseñado prendas para pasar esta temporada con moda y estilo de la marca Xiomi. Renueva tu guardarropa con estos Chompas Mujer en el color de tu preferencia y combínalos para armar tu look perfecto.",
     "sizes": ["XS", "S", "M", "L"],
     "colors": ["rosado", "celeste", "blanco", "verde"]
   },
@@ -64,7 +64,7 @@ const data = [
   },
   {
     "id": 8,
-    "productName": "PCasaca Mujer Fanny Total Sky",
+    "productName": "Casaca Mujer Fanny Total Sky",
     "productImage": "https://topitop.vteximg.com.br/arquivos/ids/348293-302-385/2020812_2.jpg?v=638471031275200000",
     "productPrice": "S/ 38.95",
     "description": "Descripción del producto 8. Un producto de calidad.",

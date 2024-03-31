@@ -1,10 +1,10 @@
-import type { Metadata } from "next";
-import "./globals.css";
-
+import type { Metadata } from 'next';
+import './globals.css';
+import Header from '@/components/Header/Header';
 
 export const metadata: Metadata = {
-  title: "Boutique Estilos",
-  description: "Tienda de Ropa de moda",
+  title: 'Boutique Estilos',
+  description: 'Tienda de Ropa de moda',
 };
 
 export default function RootLayout({
@@ -14,7 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body >{children}</body>
+      <body className='bg-gray-100'>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
