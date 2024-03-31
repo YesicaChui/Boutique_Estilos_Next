@@ -5,7 +5,16 @@ import React from 'react';
 type ColorCodes = {
   [key: string]: string;
 };
-const DetallePage = () => {
+interface DetallePageProps {
+  params: Record<string, string | string[]>;
+}
+const DetallePage = ({params}:DetallePageProps) => {
+  const {detalle} =params
+  console.log(detalle)
+
+  const producto = data.find(elemento=>elemento.id===Number(detalle))
+  
+  console.log(producto)
   const colorCodes: ColorCodes = {
     blanco: '#FFFFFF',
     negro: '#000000',
@@ -22,10 +31,16 @@ const DetallePage = () => {
     return colorCodes[colorName];
   }
 
+  if(!producto){
+    return (
+      <div>no hay nada</div>
+    )
+  }
+
   return (
     <div className="p-8 flex gap-10 justify-center">
       <Image
-        src={data[0].productImage}
+        src={producto.productImage}
         width={500}
         height={500}
         alt="Producto"
@@ -34,13 +49,13 @@ const DetallePage = () => {
       <div className="flex flex-col gap-6 w-[600px]">
         <div className="flex gap-3">
           <p className="text-base text-[#828282] font-bold">codigo</p>
-          <p className="text-[#828282] font-bold">{data[0].id}</p>
+          <p className="text-[#828282] font-bold">{producto.id}</p>
         </div>
-        <p className="text-4xl font-bold">{data[0].productName}</p>
-        <p className="text-3xl font-bold">{data[0].productPrice}</p>
+        <p className="text-4xl font-bold">{producto.productName}</p>
+        <p className="text-3xl font-bold">{producto.productPrice}</p>
         <p className="text-xl font-bold">Talla</p>
         <div className="flex gap-10 ">
-          {data[0].sizes.map((elemento, index) => (
+          {producto.sizes.map((elemento, index) => (
             <div className="text-[#828282] font-bold" key={index}>
               {elemento}
             </div>
@@ -48,7 +63,7 @@ const DetallePage = () => {
         </div>
         <p className="text-xl font-bold">Colores</p>
         <div className="flex gap-10">
-          {data[0].colors.map((elemento, index) => (
+          {producto.colors.map((elemento, index) => (
             <div className="text-[#828282] capitalize font-bold flex flex-col items-center gap-3" key={index}>
               {elemento}
               <div className='w-8 h-8  rounded-full' style={{backgroundColor:getColorCode(elemento)}}></div>
@@ -56,7 +71,7 @@ const DetallePage = () => {
           ))}
         </div>
         <p className="text-xl font-bold">Descripción</p>
-        <p className="text-[#828282] font-semibold">{data[0].description}</p>
+        <p className="text-[#828282] font-semibold">{producto.description}</p>
       </div>
     </div>
   );
