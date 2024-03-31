@@ -1,7 +1,5 @@
 import CardProducto from '@/components/CardProducto/CardProducto';
-import Header from '@/components/Header/Header';
 import data from '@/model/data';
-import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Home() {

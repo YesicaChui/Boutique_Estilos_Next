@@ -1,5 +1,6 @@
 import data from '@/model/data';
 import Image from 'next/image';
+import { notFound } from 'next/navigation';
 import React from 'react';
 
 type ColorCodes = {
@@ -8,13 +9,12 @@ type ColorCodes = {
 interface DetallePageProps {
   params: Record<string, string | string[]>;
 }
-const DetallePage = ({params}:DetallePageProps) => {
-  const {detalle} =params
-  console.log(detalle)
+const DetallePage = ({ params }: DetallePageProps) => {
+  const { detalle } = params;
+  console.log(detalle);
 
-  const producto = data.find(elemento=>elemento.id===Number(detalle))
-  
-  console.log(producto)
+  const producto = data.find((elemento) => elemento.id === Number(detalle));
+
   const colorCodes: ColorCodes = {
     blanco: '#FFFFFF',
     negro: '#000000',
@@ -27,14 +27,12 @@ const DetallePage = ({params}:DetallePageProps) => {
     rojo: '#FF0000',
     amarillo: '#FFFF00',
   };
-  function getColorCode(colorName: string): string  {
+  function getColorCode(colorName: string): string {
     return colorCodes[colorName];
   }
 
-  if(!producto){
-    return (
-      <div>no hay nada</div>
-    )
+  if (!producto) {
+    return notFound();
   }
 
   return (
@@ -64,9 +62,13 @@ const DetallePage = ({params}:DetallePageProps) => {
         <p className="text-xl font-bold">Colores</p>
         <div className="flex gap-10">
           {producto.colors.map((elemento, index) => (
-            <div className="text-[#828282] capitalize font-bold flex flex-col items-center gap-3" key={index}>
+            <div
+              className="text-[#828282] capitalize font-bold flex flex-col items-center gap-3"
+              key={index}>
               {elemento}
-              <div className='w-8 h-8  rounded-full' style={{backgroundColor:getColorCode(elemento)}}></div>
+              <div
+                className="w-8 h-8  rounded-full"
+                style={{ backgroundColor: getColorCode(elemento) }}></div>
             </div>
           ))}
         </div>
