@@ -11,7 +11,7 @@ const CardProducto = (props: CardProductoProps) => {
     <div className="bg-white w-[300px] rounded-lg flex flex-col items-center p-6 gap-3 justify-between cursor-pointer transition-transform duration-300 hover:scale-110 shadow-lg">
       <div className="flex flex-col gap-3 items-center">
         <Image src={productImage} alt="" height={200} width={400} className="rounded-md" />
-        <p className="text-2xl font-bold">{productPrice}</p>
+        <p className="text-2xl font-bold">S/. {productPrice}</p>
       </div>
       <p className="text-base font-bold">{productName}</p>
     </div>

@@ -1,16 +1,19 @@
 import CardCarrito from '@/components/CardCarrito/CardCarrito';
 import data from '@/model/data';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 const CartPage = () => {
   return (
     <div className=" p-8">
       <div className="flex justify-between py-3">
-        <div className="flex items-center">
-          <Image src={'/chevron-left.png'} alt="" height={50} width={50} />
-          <p className="text-base font-bold text-[#484848]">Continuar Comprando</p>
-        </div>
+        <Link href={'/'}>
+          <div className="flex items-center">
+            <Image src={'/chevron-left.png'} alt="" height={50} width={50} />
+            <p className="text-base font-bold text-[#484848]">Continuar Comprando</p>
+          </div>
+        </Link>
         <p></p>
       </div>
       <div className="flex py-5 gap-3">

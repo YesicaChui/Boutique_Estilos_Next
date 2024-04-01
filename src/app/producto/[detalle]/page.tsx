@@ -50,7 +50,7 @@ const DetallePage = ({ params }: DetallePageProps) => {
           <p className="text-[#828282] font-bold">{producto.id}</p>
         </div>
         <p className="text-4xl font-bold">{producto.productName}</p>
-        <p className="text-3xl font-bold">{producto.productPrice}</p>
+        <p className="text-3xl font-bold">S/. {producto.productPrice}</p>
         <p className="text-xl font-bold">Talla</p>
         <div className="flex gap-10 ">
           {producto.sizes.map((elemento, index) => (
@@ -74,6 +74,9 @@ const DetallePage = ({ params }: DetallePageProps) => {
         </div>
         <p className="text-xl font-bold">Descripción</p>
         <p className="text-[#828282] font-semibold">{producto.description}</p>
+        <p className="cursor-pointer mt-[57px] text-white font-semibold text-xl bg-[#596E79] rounded-md p-3 text-center w-[50%] ">
+          Agregar al carrito
+        </p>
       </div>
     </div>
   );
