@@ -3,7 +3,10 @@ import data from '@/model/data';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-
+export const metadata = {
+  title: "Estilos-Carrito",
+  description: "Seccion de Carrito de la pagina",
+};
 const CartPage = () => {
   return (
     <div className=" p-8">

@@ -1,7 +1,15 @@
 import data from '@/model/data';
+import { Metadata } from 'next';
+import { Params } from 'next/dist/shared/lib/router/utils/route-matcher';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import React from 'react';
+
+export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
+  return {
+    title:`estilos prod-${params.detalle}`
+  }
+}
 
 type ColorCodes = {
   [key: string]: string;
