@@ -4,10 +4,12 @@ import React from 'react';
 
 const AdminPage = () => {
   return (
-    <div>
-      <button className="bg-red-200">Nuevo Producto</button>
-      <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 ">
-        <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+    <div className="p-3">
+      <button className="bg-[#596E79] p-2 text-white rounded-md mb-3 shadow-md">
+        Nuevo Producto
+      </button>
+      <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <thead className="text-xs text-gray-700 uppercase bg-[#F0ECE3] dark:bg-gray-700 dark:text-gray-400">
           <tr>
             <th scope="col" className="px-2 py-3 text-center">
               Code
@@ -18,7 +20,7 @@ const AdminPage = () => {
             <th scope="col" className="px-2 py-3 text-center">
               Nombre
             </th>
-            <th scope="col" className="px-2 py-3 text-center">
+            <th scope="col" className="px-2 py-3 text-center ">
               Precio S/.
             </th>
             <th scope="col" className="px-2 py-3 text-center">
